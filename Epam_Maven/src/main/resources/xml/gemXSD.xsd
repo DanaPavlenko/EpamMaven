@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="gems" xmlns="gems" elementFormDefault="qualified">
+
+	<xs:element name='gems'>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name='gem' type='gemType' minOccurs='0'
+					maxOccurs='unbounded' />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="gemType">
+		<xs:sequence>
+			<xs:element name="name">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="5" />
+						<xs:maxLength value="40" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+
+			<xs:element name="presiousness">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="precious" />
+						<xs:enumeration value="semiprecious" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+
+			<xs:element name="origin">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="5" />
+						<xs:maxLength value="40" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+
+			<xs:element name="visual_parameters">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="color">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="blue" />
+									<xs:enumeration value="green" />
+									<xs:enumeration value="yellow" />
+									<xs:enumeration value="red" />
+									<xs:enumeration value="brown" />
+									<xs:enumeration value="white" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="transparency">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="0" />
+									<xs:maxInclusive value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="edge_number">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="4" />
+									<xs:maxInclusive value="15" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+
+		<xs:attribute name='gemNo' type='xs:integer' />
+	</xs:complexType>
+
+	<xs:element name="value">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1" />
+				<xs:maxInclusive value="27" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+</xs:schema>

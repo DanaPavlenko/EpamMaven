@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="gemXSLT.xsl"?>
+
+<gems xmlns="gems"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="gemXSD.xsd">
+    <gem gemNo="0">
+        <name>emerald</name>
+        <preciousness>precious</preciousness>
+        <origin>Columbia</origin>
+        <visual_parameters>
+        <color>green</color>
+        <transparency>60</transparency>
+        <edge_number>7</edge_number>
+        </visual_parameters>
+        <value>5</value>
+    </gem> 
+    
+    <gem gemNo="1">
+        <name>sapphire</name>
+        <preciousness>precious</preciousness>
+        <origin>USA</origin>
+        <visual_parameters>
+        <color>blue</color>
+        <transparency>40</transparency>
+        <edge_number>5</edge_number>
+        </visual_parameters>
+        <value>3</value>
+    </gem>
+    
+    <gem gemNo="2">
+        <name>ruby</name>
+        <preciousness>precious</preciousness>
+        <origin>Shri-Lanka</origin>
+        <visual_parameters>
+        <color>blue</color>
+        <transparency>99</transparency>
+        <edge_number>12</edge_number>
+        </visual_parameters>
+        <value>4</value>
+    </gem>
+            
+</gems>
